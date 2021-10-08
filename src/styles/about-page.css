@@ -1,0 +1,33 @@
+.about-page {
+  height: 100vh;
+  background-color: var(--prm-lg);
+  display: flex;
+}
+
+.about-page .about-content,
+.about-page .avatar-container {
+  width: 50%;
+  height: 100%;
+}
+
+.about-page .avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page .avatar-container .avatar-img {
+  width: 270px;
+  height: 270px;
+}
+
+.about-page .about-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-page .title {
+  font-size: 35px;
+  font-weight: 900;
+}

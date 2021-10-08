@@ -1,0 +1,49 @@
+:root {
+  --side-padding: 60px;
+}
+
+.welcome-page {
+  height: 100vh;
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-page .salute {
+  font-size: 45px;
+  width: 70%;
+  font-weight: 900;
+  word-spacing: 2px;
+  line-height: 1.6;
+}
+
+.welcome-page .salute .my-name {
+  border-bottom: 3px solid var(--prm);
+}
+
+.welcome-page .more-button-container {
+  width: 200px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+.welcome-page .more-button {
+  width: 200px;
+  height: 50px;
+}
+
+@media (max-width: 600px) {
+  .welcome-page {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    align-items: center;
+  }
+  .welcome-page .salute {
+    font-size: 35px;
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap');
+
+:root {
+  --prm: #FFE437;
+  --prm-lg: #ffee80;
+  --prm-drk: #d1b500;
+  --txt: #222222;
+  --txt-lg: #3f3f3f;
+  --bg: #fff;
+  --bg-drk: rgb(155, 155, 155);
+  --border-width: 3px;
+  --transition: 400ms;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bg);
+  color: var(--txt);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  background-color: var(--prm);
+  border: var(--border-width) solid var(--txt);
+  color: var(--txt);
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition) ease-in-out;
+}
+button:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.54);
+}
