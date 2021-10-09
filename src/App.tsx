@@ -70,7 +70,7 @@ const App = () => {
 
       <main className='welcome-page' id='welcome'>
         <span className="salute" id="saluteText">
-          Hi my name is <span className="my-name">Rigo Alvarenga</span>
+          Hi, my name is <span className="my-name">Rigo Alvarenga</span>
           <br />
           I'm a Software Developer
         </span>
