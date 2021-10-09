@@ -30,6 +30,7 @@ button {
   font-weight: 800;
   font-size: 16px;
   cursor: pointer;
+  padding: 10px;
   transition: var(--transition) ease-in-out;
 }
 button:hover {
