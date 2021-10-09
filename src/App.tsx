@@ -1,4 +1,4 @@
-import React, { ReactSVGElement } from 'react'
+import React, { useEffect } from 'react'
 import './styles/main.css'
 import Avatar from './assets/avatar.svg'
 import PasslogLogo from './assets/passlog_logo.svg'
@@ -10,6 +10,7 @@ import GithubLogo from './assets/social/github.svg'
 import InstagramLogo from './assets/social/instagram.svg'
 import LinkedinLogo from './assets/social/linkedin.svg'
 import FiverrLogo from './assets/social/fiverr.svg'
+import { initSr } from './animations/initSr'
 
 interface ProyectProps {
   name: string
@@ -59,6 +60,10 @@ const proyects: ProyectProps[] = [
 
 const App = () => {
 
+  useEffect(() => {
+    initSr()
+  }, [])
+
   const scrollToId = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: 'smooth',
@@ -74,7 +79,7 @@ const App = () => {
           <br />
           I'm a Software Developer
         </span>
-        <div className="more-button-container">
+        <div className="more-button-container" id='knowMoreButton'>
           <button
             onClick={() => scrollToId('about')}
             className="more-button"
@@ -83,7 +88,7 @@ const App = () => {
           </button>
         </div>
 
-        <div className="about-divider-top">
+        <div className="about-divider-top" id='aboutFrameTop'>
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
             <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" className="shape-fill"></path>
@@ -94,25 +99,25 @@ const App = () => {
 
       <main className='about-page' id='about'>
         <div className='avatar-container'>
-          <img src={Avatar} className='avatar-img' alt="" />
+          <img src={Avatar} className='avatar-img' id='avatarImg' alt="" />
         </div>
         <div className='about-content'>
-          <p>
+          <p id='aboutTitle'>
             <span className="title">
               About me
             </span>
           </p>
-          <p>
+          <p id='myName'>
             <span>
               My name is Rigo Alvarenga, also known as FailedBump, I'm a self taught software engineer located in El Salvador
             </span>
           </p>
-          <p>
+          <p id='whatDo'>
             <span>
               I code startups, sometimes create ui designs, and always learning new things
             </span>
           </p>
-          <p>
+          <p id='seeProyects'>
             <span>
               ¿Want to know my work?
             </span>
@@ -135,25 +140,27 @@ const App = () => {
         </div>
 
         <div className="proyects-body">
-          <span className='title'>
+          <span className='title' id='myWorkTitle'>
             My own work
           </span>
           {proyects.map((proyect, i) => (
-            <div className="proyect-container">
+            <div className="proyect-container" id='proyectContainer'>
               <div className="description">
                 <p>
-                  <span className="proyect-name">{proyect.name}</span>
+                  <span className="proyect-name">
+                    {proyect.name}
+                  </span>
                 </p>
                 <p>
                   <span>{proyect.description}</span>
                 </p>
                 <p className='app-links'>
-                  <a href={proyect.link} target="_blank" rel="noopener noreferrer">
+                  <a href={proyect.link} id='checkApp' target="_blank" rel="noopener noreferrer">
                     <button>
                       Check The App
                     </button>
                   </a>
-                  <a href={proyect.code} target="_blank" rel="noopener noreferrer">
+                  <a href={proyect.code} id='sourceCode' target="_blank" rel="noopener noreferrer">
                     <button className='sourcecode-button'>
                       Source Code
                     </button>
@@ -161,7 +168,7 @@ const App = () => {
                 </p>
               </div>
               <div className="display">
-                <img src={proyect.logo} className='app-logo' alt="" />
+                <img src={proyect.logo} id='appLogo' className='app-logo' alt="" />
               </div>
             </div>
           ))}
@@ -169,17 +176,17 @@ const App = () => {
       </main>
 
       <main className="contact-page" id="contact">
-        <p>
+        <p id='thanksForView'>
           <span className="title">
             Thanks for stopping by
           </span>
         </p>
-        <p style={{ width: '90%' }}>
+        <p style={{ width: '90%' }} id='contactDescription'>
           <span>
             If you have an app idea, want to develop an app or just a comment to can contact me
           </span>
         </p>
-        <p>
+        <p id='sendMailButton'>
           <a href="mailto:jralvarenga161@gmail.com">
             <button>Send Me A Mail</button>
           </a>
@@ -187,23 +194,23 @@ const App = () => {
         <br />
         <br />
         <div className='social-media-container'>
-          <a href="https://github.com/jralvarenga" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jralvarenga" id='socialButton1' target="_blank" rel="noopener noreferrer">
             <div className='social-media-icon-box'>
               <img src={GithubLogo} className='social-icon' alt="" />
             </div>
           </a>
           {/* https://www.instagram.com/rigo_alvarenga/ */}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jralvarenga" id='socialButton2' target="_blank" rel="noopener noreferrer">
             <div className='social-media-icon-box'>
               <img src={InstagramLogo} className='social-icon' alt="" />
             </div>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jralvarenga" id='socialButton3' target="_blank" rel="noopener noreferrer">
             <div className='social-media-icon-box'>
               <img src={LinkedinLogo} className='social-icon' alt="" />
             </div>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jralvarenga" id='socialButton4' target="_blank" rel="noopener noreferrer">
             <div className='social-media-icon-box fiverr-container'>
               <img src={FiverrLogo} className='fiverr-icon' alt="" />
             </div>
