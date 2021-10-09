@@ -36,3 +36,7 @@ button {
 button:hover {
   box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.54);
 }
+button:active {
+  background-color: var(--prm-drk);
+  transition: 100ms;
+}
