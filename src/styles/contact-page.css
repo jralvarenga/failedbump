@@ -1,0 +1,57 @@
+.contact-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-page .title {
+  font-size: 45px;
+  font-weight: 900;
+  word-spacing: 2px;
+  line-height: 1.6;
+}
+
+.social-media-container {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-drk);
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-media-icon-box:hover {
+  background-color: rgb(173, 173, 173);
+}
+
+.fiverr-container {
+  width: 84px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.fiverr-icon {
+  color: var(--txt);
+  width: 50px;
+  height: 14px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}

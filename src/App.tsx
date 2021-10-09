@@ -6,6 +6,10 @@ import CalcularyLogo from './assets/calculary_logo.svg'
 import AssignitLogo from './assets/assignit_logo.svg'
 import MoviewLogo from './assets/moview_logo.svg'
 import PlaylifyLogo from './assets/playlify_logo.svg'
+import GithubLogo from './assets/social/github.svg'
+import InstagramLogo from './assets/social/instagram.svg'
+import LinkedinLogo from './assets/social/linkedin.svg'
+import FiverrLogo from './assets/social/fiverr.svg'
 
 interface ProyectProps {
   name: string
@@ -161,6 +165,49 @@ const App = () => {
               </div>
             </div>
           ))}
+        </div>
+      </main>
+
+      <main className="contact-page" id="contact">
+        <p>
+          <span className="title">
+            Thanks for stopping by
+          </span>
+        </p>
+        <p style={{ width: '90%' }}>
+          <span>
+            If you have an app idea, want to develop an app or just a comment to can contact me
+          </span>
+        </p>
+        <p>
+          <a href="mailto:jralvarenga161@gmail.com">
+            <button>Send Me A Mail</button>
+          </a>
+        </p>
+        <br />
+        <br />
+        <div className='social-media-container'>
+          <a href="https://github.com/jralvarenga" target="_blank" rel="noopener noreferrer">
+            <div className='social-media-icon-box'>
+              <img src={GithubLogo} className='social-icon' alt="" />
+            </div>
+          </a>
+          {/* https://www.instagram.com/rigo_alvarenga/ */}
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <div className='social-media-icon-box'>
+              <img src={InstagramLogo} className='social-icon' alt="" />
+            </div>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <div className='social-media-icon-box'>
+              <img src={LinkedinLogo} className='social-icon' alt="" />
+            </div>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <div className='social-media-icon-box fiverr-container'>
+              <img src={FiverrLogo} className='fiverr-icon' alt="" />
+            </div>
+          </a>
         </div>
       </main>
 
