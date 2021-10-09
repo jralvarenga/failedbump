@@ -24,14 +24,24 @@
 }
 
 .welcome-page .more-button-container {
-  width: 200px;
   height: 60px;
   margin-top: 30px;
+  display: flex;
+  align-items: center;
 }
 
-.welcome-page .more-button {
-  width: 200px;
-  height: 50px;
+.welcome-page .more-button-container button {
+  width: 150px;
+  height: 60px;
+}
+
+.contact-button {
+  background-color: var(--bg);
+  margin-left: 15px;
+}
+.contact-button:active {
+  transition: 0ms;
+  background-color: var(--bg-drk);
 }
 
 @media (max-width: 600px) {

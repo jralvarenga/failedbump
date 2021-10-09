@@ -1,62 +1,8 @@
 import React, { useEffect } from 'react'
 import './styles/main.css'
 import Avatar from './assets/avatar.svg'
-import PasslogLogo from './assets/passlog_logo.svg'
-import CalcularyLogo from './assets/calculary_logo.svg'
-import AssignitLogo from './assets/assignit_logo.svg'
-import MoviewLogo from './assets/moview_logo.svg'
-import PlaylifyLogo from './assets/playlify_logo.svg'
-import GithubLogo from './assets/social/github.svg'
-import InstagramLogo from './assets/social/instagram.svg'
-import LinkedinLogo from './assets/social/linkedin.svg'
-import FiverrLogo from './assets/social/fiverr.svg'
 import { initSr } from './animations/initSr'
-
-interface ProyectProps {
-  name: string
-  description: string
-  link: string
-  code: string
-  logo: string
-}
-
-const proyects: ProyectProps[] = [
-  {
-    name: 'Passlog',
-    description: 'Save all your private data like passwords, notes & cards and keep them safe in one place, Passlog is the open source proyect were you can store all your sensitive information and stop worrying about it.',
-    link: 'https://passlog.vercel.app/',
-    code: 'https://github.com/jralvarenga/passlog',
-    logo: PasslogLogo
-  },
-  {
-    name: 'Calculary',
-    description: 'Does everything that a normal calculator and more, solve your math functions quickly and have a preview of how the plot looks like, solve a function derivative or integral or use numerical methods to solve multiple problems with Calculary.',
-    link: 'https://play.google.com/store/apps/details?id=com.failedbump.calculary',
-    code: 'https://github.com/jralvarenga/calculary',
-    logo: CalcularyLogo
-  },
-  {
-    name: 'Assignit',
-    description: 'Keep all your tasks or assigments organized in one place where you can add assignments (tasks, events, etc.) to your subjects (task group), add new assignments, view them in your Assignit Agenda or Google Calendar, see your stadistics and more.',
-    link: 'https://assignit.vercel.app',
-    code: 'https://github.com/jralvarenga/assignit',
-    logo: AssignitLogo
-  },
-  {
-    name: 'Playlify',
-    description: 'Create new playlists and discover new music from just one song.',
-    link: 'https://playlify.vercel.app',
-    code: 'https://github.com/jralvarenga/playlify',
-    logo: PlaylifyLogo
-  },
-  {
-    name: 'Moview',
-    description: 'See what are the top movies and TV series of the moment with Moview',
-    link: 'https://moview.vercel.app',
-    code: 'https://github.com/jralvarenga/moview',
-    logo: MoviewLogo
-  }
-]
+import { proyects, socialLinks } from './data/myData'
 
 const App = () => {
 
@@ -82,9 +28,14 @@ const App = () => {
         <div className="more-button-container" id='knowMoreButton'>
           <button
             onClick={() => scrollToId('about')}
-            className="more-button"
           >
             Know More
+          </button>
+          <button
+            onClick={() => scrollToId('contact')}
+            className='contact-button'
+          >
+            Contact me
           </button>
         </div>
 
@@ -194,27 +145,19 @@ const App = () => {
         <br />
         <br />
         <div className='social-media-container'>
-          <a href="https://github.com/jralvarenga" id='socialButton1' target="_blank" rel="noopener noreferrer">
-            <div className='social-media-icon-box'>
-              <img src={GithubLogo} className='social-icon' alt="" />
-            </div>
-          </a>
-          {/* https://www.instagram.com/rigo_alvarenga/ */}
-          <a href="https://github.com/jralvarenga" id='socialButton2' target="_blank" rel="noopener noreferrer">
-            <div className='social-media-icon-box'>
-              <img src={InstagramLogo} className='social-icon' alt="" />
-            </div>
-          </a>
-          <a href="https://github.com/jralvarenga" id='socialButton3' target="_blank" rel="noopener noreferrer">
-            <div className='social-media-icon-box'>
-              <img src={LinkedinLogo} className='social-icon' alt="" />
-            </div>
-          </a>
-          <a href="https://github.com/jralvarenga" id='socialButton4' target="_blank" rel="noopener noreferrer">
-            <div className='social-media-icon-box fiverr-container'>
-              <img src={FiverrLogo} className='fiverr-icon' alt="" />
-            </div>
-          </a>
+          {socialLinks.map((link, i) => (
+            <a href={link.link} id={`socialButton${i+1}`} target="_blank" rel="noopener noreferrer">
+              <div
+                className={`social-media-icon-box ${link.fiverrLink && 'fiverr-container'}`}
+              >
+                <img
+                  src={link.icon}
+                  className={link.fiverrLink ? 'fiverr-icon' : 'social-icon'}
+                  alt=""
+                />
+              </div>
+            </a>
+          ))}
         </div>
       </main>
 
