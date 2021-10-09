@@ -12,6 +12,29 @@
   --transition: 400ms;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--bg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--prm);
+  cursor: grab;
+  border-radius: 50px;
+  transition: 300ms;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--prm-drk);
+}
+
 html,
 body {
   margin: 0px;
@@ -21,6 +44,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 button {
