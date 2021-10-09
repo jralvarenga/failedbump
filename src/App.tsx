@@ -139,7 +139,7 @@ const App = () => {
         </p>
         <p id='sendMailButton'>
           <a href="mailto:jralvarenga161@gmail.com">
-            <button>Send Me A Mail</button>
+            <button>Send Me An Email</button>
           </a>
         </p>
         <br />
