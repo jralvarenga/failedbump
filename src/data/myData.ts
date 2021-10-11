@@ -74,7 +74,7 @@ export const socialLinks: SocialLinks[] = [
     icon: LinkedinLogo
   },
   {
-    link: 'https://github.com/jralvarenga',
+    link: 'https://www.fiverr.com/fbp_dev?up_rollout=true',
     icon: FiverrLogo,
     fiverrLink: true
   }
