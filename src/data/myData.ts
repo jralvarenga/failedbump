@@ -8,6 +8,8 @@ import InstagramLogo from '../assets/social/instagram.svg'
 import LinkedinLogo from '../assets/social/linkedin.svg'
 import FiverrLogo from '../assets/social/fiverr.svg'
 
+// THis is a comments man
+
 interface ProyectProps {
   name: string
   description: string
