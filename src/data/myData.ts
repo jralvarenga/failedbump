@@ -6,7 +6,6 @@ import PlaylifyLogo from '../assets/playlify_logo.svg'
 import GithubLogo from '../assets/social/github.svg'
 import InstagramLogo from '../assets/social/instagram.svg'
 import LinkedinLogo from '../assets/social/linkedin.svg'
-import FiverrLogo from '../assets/social/fiverr.svg'
 
 // THis is a comments man
 
