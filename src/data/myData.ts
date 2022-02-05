@@ -27,14 +27,14 @@ export const proyects: ProyectProps[] = [
   {
     name: 'Passlog',
     description: 'Save all your private data like passwords, notes & cards and keep them safe in one place, Passlog is the open source proyect were you can store all your sensitive information and stop worrying about it.',
-    link: 'https://passlog.vercel.app/',
+    link: 'https://passlog.failedbump.com/',
     code: 'https://github.com/jralvarenga/passlog',
     logo: PasslogLogo
   },
   {
     name: 'Moview',
     description: 'See what are the top movies and TV series of the moment with Moview',
-    link: 'https://moview.failedbump.app',
+    link: 'https://moview.failedbump.com',
     code: 'https://github.com/jralvarenga/moview',
     logo: MoviewLogo
   },
