@@ -33,6 +33,13 @@ export const proyects: ProyectProps[] = [
     logo: PasslogLogo
   },
   {
+    name: 'Moview',
+    description: 'See what are the top movies and TV series of the moment with Moview',
+    link: 'https://moview.failedbump.app',
+    code: 'https://github.com/jralvarenga/moview',
+    logo: MoviewLogo
+  },
+  {
     name: 'Calculary',
     description: 'Does everything that a normal calculator and more, solve your math functions quickly and have a preview of how the plot looks like, solve a function derivative or integral or use numerical methods to solve multiple problems with Calculary.',
     link: 'https://play.google.com/store/apps/details?id=com.failedbump.calculary',
@@ -53,13 +60,6 @@ export const proyects: ProyectProps[] = [
     code: 'https://github.com/jralvarenga/playlify',
     logo: PlaylifyLogo
   },
-  {
-    name: 'Moview',
-    description: 'See what are the top movies and TV series of the moment with Moview',
-    link: 'https://moview.vercel.app',
-    code: 'https://github.com/jralvarenga/moview',
-    logo: MoviewLogo
-  }
 ]
 
 export const socialLinks: SocialLinks[] = [
@@ -74,10 +74,5 @@ export const socialLinks: SocialLinks[] = [
   {
     link: 'https://github.com/jralvarenga',
     icon: LinkedinLogo
-  },
-  {
-    link: 'https://www.fiverr.com/fbp_dev?up_rollout=true',
-    icon: FiverrLogo,
-    fiverrLink: true
   }
 ]
