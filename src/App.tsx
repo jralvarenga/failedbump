@@ -18,7 +18,6 @@ const App = () => {
 
   return (
     <div>
-
       <main className='welcome-page' id='welcome'>
         <span className="salute" id="saluteText">
           Hi, my name is <span className="my-name">Rigo Alvarenga</span>
@@ -38,7 +37,6 @@ const App = () => {
             Contact me
           </button>
         </div>
-
         <div className="about-divider-top" id='aboutFrameTop'>
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -47,7 +45,6 @@ const App = () => {
           </svg>
         </div>
       </main>
-
       <main className='about-page' id='about'>
         <div className='avatar-container'>
           <img src={Avatar} className='avatar-img' id='avatarImg' alt="" />
@@ -65,7 +62,7 @@ const App = () => {
           </p>
           <p id='whatDo'>
             <span>
-              I code startups, sometimes create ui designs, and always learning new things
+              I code startups, sometimes create UI designs, and always learning new things
             </span>
           </p>
           <p id='seeProyects'>
@@ -80,7 +77,6 @@ const App = () => {
           </p>
         </div>
       </main>
-
       <main className="proyects-page" id="proyects">
         <div className="about-divider-bottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -89,7 +85,6 @@ const App = () => {
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
           </svg>
         </div>
-
         <div className="proyects-body">
           <span className='title' id='myWorkTitle'>
             My own work
@@ -125,7 +120,6 @@ const App = () => {
           ))}
         </div>
       </main>
-
       <main className="contact-page" id="contact">
         <p id='thanksForView'>
           <span className="title">
@@ -134,7 +128,7 @@ const App = () => {
         </p>
         <p style={{ width: '90%' }} id='contactDescription'>
           <span>
-            If you have an app idea, want to develop an app or just a comment to can contact me
+            If you have an app idea, want to develop an app or just a comment you can contact me
           </span>
         </p>
         <p id='sendMailButton'>
